@@ -6,8 +6,8 @@ app.get('/', (req,res) => {
     return res.json({message: "Hello World"});
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+const IP = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
-});
+app.listen(PORT, IP);
+console.log('Server running on http://%s:%s', IP, PORT);

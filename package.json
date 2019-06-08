@@ -10,5 +10,13 @@
     "start": "node index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sclorg/nodejs-ex.git"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  }
 }
